@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pacman/path.dart';
 import 'package:pacman/pixel.dart';
 
 class PacMan extends StatefulWidget {
@@ -31,7 +32,6 @@ class _PacManState extends State<PacMan> {
     55,
     66,
     77,
-    88,
     99,
     110,
     121,
@@ -57,7 +57,6 @@ class _PacManState extends State<PacMan> {
     131,
     120,
     109,
-    98,
     87,
     76,
     65,
@@ -65,7 +64,57 @@ class _PacManState extends State<PacMan> {
     43,
     32,
     21,
-    10
+    10,
+    24,
+    35,
+    46,
+    57,
+    78,
+    79,
+    80,
+    81,
+    70,
+    59,
+    26,
+    37,
+    38,
+    39,
+    28,
+    30,
+    41,
+    52,
+    63,
+    61,
+    72,
+    83,
+    84,
+    85,
+    86,
+    100,
+    101,
+    102,
+    103,
+    114,
+    125,
+    123,
+    134,
+    145,
+    156,
+    158,
+    147,
+    148,
+    149,
+    160,
+    127,
+    116,
+    105,
+    106,
+    107,
+    108,
+    129,
+    140,
+    151,
+    162
   ];
 
   @override
@@ -87,17 +136,15 @@ class _PacManState extends State<PacMan> {
                     itemBuilder: (BuildContext context, int index) {
                       if (barreries.contains(index)) {
                         return Pixel(
-                          color: Colors.blue[800],
-                          innerColor: Colors.blue,
-                          child: Text(index.toString()),
+                          color: Colors.blue[900],
+                          innerColor: Colors.blue[800],
+                          // child: Text(index.toString()),
                         );
                       } else {
-                        return Padding(
-                          padding: const EdgeInsets.all(1),
-                          child: Container(
-                            color: Colors.grey,
-                            child: Text(index.toString()),
-                          ),
+                        return MyPath(
+                          color: Colors.black,
+                          innerColor: Colors.yellow,
+                          // child: Text(index.toString()),
                         );
                       }
                     },
