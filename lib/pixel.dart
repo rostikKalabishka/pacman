@@ -17,15 +17,13 @@ class Pixel extends StatelessWidget {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(6),
           child: Container(
+            padding: EdgeInsets.all(3),
             color: color,
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(40),
-              child: Padding(
-                padding: const EdgeInsets.all(1),
-                child: Container(
-                  color: innerColor,
-                  child: child,
-                ),
+              borderRadius: BorderRadius.circular(10),
+              child: Container(
+                color: innerColor,
+                child: Center(child: child),
               ),
             ),
           ),

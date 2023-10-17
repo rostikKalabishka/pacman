@@ -87,8 +87,8 @@ class _PacManState extends State<PacMan> {
                     itemBuilder: (BuildContext context, int index) {
                       if (barreries.contains(index)) {
                         return Pixel(
-                          color: Colors.blue,
-                          innerColor: Colors.blue[800],
+                          color: Colors.blue[800],
+                          innerColor: Colors.blue,
                           child: Text(index.toString()),
                         );
                       } else {
