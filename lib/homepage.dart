@@ -141,7 +141,7 @@ class _PacManState extends State<PacMan> {
                           // child: Text(index.toString()),
                         );
                       } else {
-                        return MyPath(
+                        return const MyPath(
                           color: Colors.black,
                           innerColor: Colors.yellow,
                           // child: Text(index.toString()),
